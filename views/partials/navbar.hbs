@@ -1,0 +1,26 @@
+<nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo right">Cafe</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+        {{#if isMain}}
+            <li class="active"><a href="/">Main</a></li>
+        {{else}}
+            <li><a href="/">Main</a></li>
+        {{/if}}
+
+        {{#if isMenu}}
+            <li class="active"><a href="/menu">Menu</a></li>
+        {{else}}
+            <li><a href="/menu">Menu</a></li>
+        {{/if}}
+
+        {{#if isReservation}}
+            <li class="active"><a href="/reservation">Reservation</a></li>
+        {{else}}
+            <li><a href="/reservation">Reservation</a></li>
+        {{/if}}
+
+      </ul>
+    </div>
+  </nav>
