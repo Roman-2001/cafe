@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='number') Номер:
+      input#title.form-control(type='number', name='number' required='true' value=(""))
+    div.form-group
+      label(for='place') Расположение:
+      input#title.form-control(type='text', name='place' required='true' value=(""))
+    div.form-group
+      label(for='capacity') Количество мест:
+      input#title.form-control(type='number', name='capacity' required='true' value=(""))
+    button.btn.btn-primary(type='submit') Подтвердить
+
+  if errors 
+    ul
+      for error in errors
+        li!= error

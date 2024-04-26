@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em Cafe], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+
+  h1 Dynamic content
+
+  p The cafe has the following record counts:
+
+  ul
+    li #[strong Dishes numbers:] !{dish_count}
+    li #[strong Tables:] !{table_count}
+    li #[strong Tables available:] !{table_available_count}
+

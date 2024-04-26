@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+  each dish in dish_list
+    li
+        div(style='margin-left:20px;margin-top:20px')
+            a(href=dish.url) #{dish.name}
+            br
+            img(src='/images/' + dish.file_name style='width:640px;height:440px;')
+            p #{dish.description}, #[strong Цена : ]  #{dish.price}
+
+  else
+    li There are no dishes.

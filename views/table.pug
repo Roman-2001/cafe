@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each val in table_list
+      li
+        a(href=val.url) Number: #{val.number} ; Capacity: #{val.capacity} ; State:  
+        if val.state=='Available'
+          span.text-success #{val.state}
+        else if val.status=='Maintenance'
+          span.text-danger #{val.state}
+        else
+          span.text-warning #{val.state}
+        if val.state!='Available'
+          span  (Dates: #{val.date_occupied_formatted} )
+
+    else
+      li There are no tables in this cafe.

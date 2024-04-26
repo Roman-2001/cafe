@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Table #{table.number}
+
+  p #[strong Place:] #{table.place}
+  p #[strong Capacity:] #{table.capacity}
+  p #[strong Dates occupied: ] 
+    ul
+      for date in table.date_occupied_formatted
+        li= date
+
+  a(class="button" href="./"+table._id +"/reservation/") Забронировать 
+  br
+  a(class="button" href="./"+table._id +"/reservation/cancel") Отменить бронь 
+  br
+  a(class="button" href="./"+table._id + "/update") Обновить данные 
+  br
+  a(class="button" href="./"+table._id + "/delete") Удалить

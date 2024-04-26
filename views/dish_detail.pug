@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1 Dish: #{dish.name}
+  p Price: #{dish.price} рублей
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Description
+    #{dish.description}
+
+  a(class="button" href="./"+dish._id + "/update") Обновить данные 
+  br
+  a(class="button" href="./"+dish._id + "/delete") Удалить

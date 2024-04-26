@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='date') Дата брони:
+      input#title.form-control(type='date', name='date' required='true' value=(''))
+    div.form-group
+      label(for='time') Время брони:
+      input#title.form-control(type='time', name='time' required='true' value=(''))
+    button.btn.btn-primary(type='submit') Отправить данные
+
+  if errors 
+    ul
+      for error in errors
+        li!= error

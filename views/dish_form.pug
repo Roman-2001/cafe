@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='dish_type') Тип: 
+      input(type='radio', name='dish_type', value=('food'))#food
+      lable(for='food') Food 
+      input(type="radio", name='dish_type', value=('drinkables'))#drinkables
+      lable(for="drinkables") Drinks 
+    div.form-group
+      label(for='name') Название:
+      input#title.form-control(type='text', name='name' required='true' value=(''))
+    div.form-group
+      label(for='price') Цена:
+      input#title.form-control(type='number', name='price' required='true' value=(''))
+    div.form-group
+      label(for='description') Описание:
+      input#title.form-control(type='text', name='description' required='true' value=(''))
+    div.form-group
+      label(for='file_name') Имя картинки:
+      input#title.form-control(type='text', name='file_name' required='true' value=(''))
+    button.btn.btn-primary(type='submit') Создать
+
+  if errors 
+    ul
+      for error in errors
+        li!= error
